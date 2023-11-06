@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    min-height: 100vh; /*Alto*/
+    min-width: 100vw;/*Ancho*/
+    display: flex;/*Centrar*/
+    align-items: center;/*Centro*/
+    justify-content: center;
+    background:  rgb(114, 6, 238);
+}
+
+.pantalla{
+    user-select: none; /*No permite seleccionar los números o modificar*/
+}
+
+.cronometro .pantalla{
+    height: 65px; 
+    background: mediumorchid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 8px 5px darkviolet;      
+    /*1.Izquierda a la sombra, 2.arriba a la sombra, 3,difuminación, 4.sombra de forma pareja*/
+    border:none;
+}
+
+.cronometro .pantalla span{
+    width: 100px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 550;
+    color: blueviolet;
+}
+
+.pantalla span.separador{
+    width: 10px;
+}
+
+.pantalla span.separador-mili,
+.pantalla span.milisegundo{
+    color: darkviolet;  
+}
+
+.cronometro .botones{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.botones button{
+    padding: 6px 16px;
+    outline: none;
+    border: none;
+    margin: 0px 10px;
+    color: mediumslateblue;
+    background: antiquewhite;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 0.9rem;
+    cursor: pointer;
+    box-shadow: 3px 4px 3px 0px violet;
+}
+
+.botones button.on {/*Clase temporal (No esta creada en el html, solo la llamamos desde el javaScript), cuando queremos crear clases y quitarlas desde javaScript con: classList.add -.remove*/
+    pointer-events: none; /*Boton deshabilitado mientras este iniciado el cronometro  */
+    opacity: 0.7; /*Boton de iniciar se ponga como si estuviera hundido, opacando el color */
+    
+}
